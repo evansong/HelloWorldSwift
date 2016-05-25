@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6EC919471CF60160005E94A4 /* RobotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC919461CF60160005E94A4 /* RobotKit.framework */; };
-		6EC919491CF6016A005E94A4 /* RobotUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC919481CF6016A005E94A4 /* RobotUIKit.framework */; };
+		6EC9194B1CF603DC005E94A4 /* RobotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC9194A1CF603DC005E94A4 /* RobotKit.framework */; };
+		6EC9194D1CF603E8005E94A4 /* RobotUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC9194C1CF603E8005E94A4 /* RobotUIKit.framework */; };
 		EA5C224C1A1E9078001F5117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C224B1A1E9078001F5117 /* AppDelegate.swift */; };
 		EA5C224E1A1E9078001F5117 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C224D1A1E9078001F5117 /* ViewController.swift */; };
 		EA5C22511A1E9078001F5117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5C224F1A1E9078001F5117 /* Main.storyboard */; };
@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6EC919461CF60160005E94A4 /* RobotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotKit.framework; path = frameworks/RobotKit.framework; sourceTree = "<group>"; };
-		6EC919481CF6016A005E94A4 /* RobotUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotUIKit.framework; path = frameworks/RobotUIKit.framework; sourceTree = "<group>"; };
+		6EC9194A1CF603DC005E94A4 /* RobotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotKit.framework; path = frameworks/RobotKit.framework; sourceTree = "<group>"; };
+		6EC9194C1CF603E8005E94A4 /* RobotUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotUIKit.framework; path = frameworks/RobotUIKit.framework; sourceTree = "<group>"; };
 		EA5C22461A1E9078001F5117 /* HelloWorldSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorldSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C224A1A1E9078001F5117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5C224B1A1E9078001F5117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,8 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC919491CF6016A005E94A4 /* RobotUIKit.framework in Frameworks */,
-				6EC919471CF60160005E94A4 /* RobotKit.framework in Frameworks */,
+				6EC9194D1CF603E8005E94A4 /* RobotUIKit.framework in Frameworks */,
+				6EC9194B1CF603DC005E94A4 /* RobotKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +84,8 @@
 		EA5C226D1A1E913C001F5117 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6EC919481CF6016A005E94A4 /* RobotUIKit.framework */,
-				6EC919461CF60160005E94A4 /* RobotKit.framework */,
+				6EC9194C1CF603E8005E94A4 /* RobotUIKit.framework */,
+				6EC9194A1CF603DC005E94A4 /* RobotKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
