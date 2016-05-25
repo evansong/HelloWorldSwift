@@ -209,5 +209,9 @@ class ViewController: UIViewController, RKResponseObserver {
             })
         }
     }
+    
+    func resetDeviceHeading() {
+        robot.setZeroHeading()
+    }
 }
 
