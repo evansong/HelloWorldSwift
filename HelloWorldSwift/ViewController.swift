@@ -19,7 +19,7 @@ class ViewController: UIViewController, RKResponseObserver {
     
     override func viewDidLoad() {
         
-        self.calibrateHandler = RUICalibrateGestureHandler(view: self.viewIfLoaded);
+        self.calibrateHandler = RUICalibrateGestureHandler(view: self.view);
         
         super.viewDidLoad()
        
@@ -30,11 +30,11 @@ class ViewController: UIViewController, RKResponseObserver {
     }
     
     func handleAsyncMessage(message: RKAsyncMessage!, forRobot robot: RKRobotBase!) {
-        if (message is RKCollisionDetectedAsyncData) {
+/*        if (message is RKCollisionDetectedAsyncData) {
             blink(true)
             lblSpheroState.text = "Collision occurred.  Stopping...";
         }
-
+*/
         if let sensorMessage = message as? RKDeviceSensorsAsyncData {
             let sensorData = sensorMessage.dataFrames.last as? RKDeviceSensorsData;
             
@@ -125,7 +125,7 @@ class ViewController: UIViewController, RKResponseObserver {
                     calibrateHandler.robot = self.robot.robot;
                     
                     //Create a mask for the sensors you are interested in
-                    let mask: RKDataStreamingMask = [.AccelerometerFilteredAll, .IMUAnglesFilteredAll, .GyroFilteredAll];
+                    let mask: RKDataStreamingMask = [.AccelerometerFilteredAll, .IMUAnglesFilteredAll, .GyroFilteredAll, .LocatorAll];
                     self.robot.enableSensors(mask, atStreamingRate: RKStreamingRate.DataStreamingRate1);// DataStreamingRate100);
 
                     connectionLabel.text = noteRobot.name()

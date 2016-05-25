@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloWorldSwift/ViewController.swift"
-            timestampString = "485876005.900441"
+            timestampString = "485884634.898942"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "handleRobotStateChangeNotification(_:)"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "didTouch0(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloWorldSwift/ViewController.swift"
+            timestampString = "485884636.605001"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "didTouch90(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

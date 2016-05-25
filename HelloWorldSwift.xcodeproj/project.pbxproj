@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EC919471CF60160005E94A4 /* RobotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC919461CF60160005E94A4 /* RobotKit.framework */; };
+		6EC919491CF6016A005E94A4 /* RobotUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC919481CF6016A005E94A4 /* RobotUIKit.framework */; };
 		EA5C224C1A1E9078001F5117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C224B1A1E9078001F5117 /* AppDelegate.swift */; };
 		EA5C224E1A1E9078001F5117 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C224D1A1E9078001F5117 /* ViewController.swift */; };
 		EA5C22511A1E9078001F5117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5C224F1A1E9078001F5117 /* Main.storyboard */; };
 		EA5C22531A1E9078001F5117 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5C22521A1E9078001F5117 /* Images.xcassets */; };
 		EA5C22561A1E9078001F5117 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5C22541A1E9078001F5117 /* LaunchScreen.xib */; };
-		EA8614BD1A2683DA004022C1 /* RobotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8614BC1A2683DA004022C1 /* RobotKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EC919461CF60160005E94A4 /* RobotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotKit.framework; path = frameworks/RobotKit.framework; sourceTree = "<group>"; };
+		6EC919481CF6016A005E94A4 /* RobotUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotUIKit.framework; path = frameworks/RobotUIKit.framework; sourceTree = "<group>"; };
 		EA5C22461A1E9078001F5117 /* HelloWorldSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorldSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C224A1A1E9078001F5117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5C224B1A1E9078001F5117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,7 +27,6 @@
 		EA5C22521A1E9078001F5117 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA5C22551A1E9078001F5117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EA5C226E1A1E9171001F5117 /* HelloWorldSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorldSwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		EA8614BC1A2683DA004022C1 /* RobotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotKit.framework; path = ../_Frameworks_iOS/RobotKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA8614BD1A2683DA004022C1 /* RobotKit.framework in Frameworks */,
+				6EC919491CF6016A005E94A4 /* RobotUIKit.framework in Frameworks */,
+				6EC919471CF60160005E94A4 /* RobotKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +84,8 @@
 		EA5C226D1A1E913C001F5117 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA8614BC1A2683DA004022C1 /* RobotKit.framework */,
+				6EC919481CF6016A005E94A4 /* RobotUIKit.framework */,
+				6EC919461CF60160005E94A4 /* RobotKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,14 +116,12 @@
 		EA5C223E1A1E9078001F5117 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = orbotix;
 				TargetAttributes = {
 					EA5C22451A1E9078001F5117 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = LD4SCUA7DC;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -211,7 +213,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -278,11 +279,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks",
+				);
 				INFOPLIST_FILE = HelloWorldSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -290,7 +291,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.providence.orbotix.HelloWorldSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldSwift/HelloWorldSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -301,11 +301,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks",
+				);
 				INFOPLIST_FILE = HelloWorldSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -313,7 +313,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.providence.orbotix.HelloWorldSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldSwift/HelloWorldSwift-Bridging-Header.h";
 			};
 			name = Release;
