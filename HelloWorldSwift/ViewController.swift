@@ -30,11 +30,7 @@ class ViewController: UIViewController, RKResponseObserver {
     }
     
     func handleAsyncMessage(message: RKAsyncMessage!, forRobot robot: RKRobotBase!) {
-/*        if (message is RKCollisionDetectedAsyncData) {
-            blink(true)
-            lblSpheroState.text = "Collision occurred.  Stopping...";
-        }
-*/
+
         if let sensorMessage = message as? RKDeviceSensorsAsyncData {
             let sensorData = sensorMessage.dataFrames.last as? RKDeviceSensorsData;
             
@@ -59,8 +55,8 @@ class ViewController: UIViewController, RKResponseObserver {
                 
                 let locatorPositionX = locator.position.x;
                 let locatorPositionY = locator.position.y;
-                //let locatorVelocityX = locator.velocity.x;
-                //let locatorVelocityY = locator.velocity.y;
+                let locatorVelocityX = locator.velocity.x;
+                let locatorVelocityY = locator.velocity.y;
 
                 lblSpheroVelocity.text = "Acceleration > X: \(accelX), Y: \(accelY), Z: \(accelZ)";
             
@@ -68,7 +64,7 @@ class ViewController: UIViewController, RKResponseObserver {
                 
                 lblSpheroPosition.text = "Gyro > X: \(gyroX), Y: \(gyroY), Z: \(gyroZ)";
 
-                lblSpheroLocator.text = "Position > X: \(locatorPositionX), Y: \(locatorPositionY)";
+                lblSpheroLocator.text = "Position > X: \(locatorPositionX), Y: \(locatorPositionY) / Velocity > X: \(locatorVelocityX), Y: \(locatorVelocityY)";
             }
         }
     }
@@ -117,16 +113,11 @@ class ViewController: UIViewController, RKResponseObserver {
                     self.robot = RKConvenienceRobot(robot: noteRobot);
 
                     self.robot.addResponseObserver(self);
-                    self.robot.enableStabilization(false);
                     self.robot.enableLocator(true);
-                    self.robot.enableCollisions(true);
-                    
-                    startLocatorStreaming();
-                    calibrateHandler.robot = self.robot.robot;
                     
                     //Create a mask for the sensors you are interested in
                     let mask: RKDataStreamingMask = [.AccelerometerFilteredAll, .IMUAnglesFilteredAll, .GyroFilteredAll, .LocatorAll];
-                    self.robot.enableSensors(mask, atStreamingRate: RKStreamingRate.DataStreamingRate1);// DataStreamingRate100);
+                    self.robot.enableSensors(mask, atStreamingRate: RKStreamingRate.DataStreamingRate10);
 
                     connectionLabel.text = noteRobot.name()
                     togleLED()
@@ -137,9 +128,9 @@ class ViewController: UIViewController, RKResponseObserver {
                 connectionLabel.text = "Disconnected"
                 self.robot = RKConvenienceRobot(robot: noteRobot);
                 self.robot.removeResponseObserver(self)
-                startDiscovery()
-                robot = nil;
+                //startDiscovery()
                 calibrateHandler.robot = nil;
+                robot = nil;
                 break
             
             default:
@@ -161,22 +152,22 @@ class ViewController: UIViewController, RKResponseObserver {
     }
     
     @IBAction func didTouch0(sender: AnyObject) {
-        self.robot.driveWithHeading(0.0, andVelocity: VELOCITY);
+        self.robot.sendCommand(RKRollCommand(heading: 0.0, andVelocity: VELOCITY));
         lblOutput.text = "Moving forward";
     }
     
     @IBAction func didTouch90(sender: AnyObject) {
-        self.robot.driveWithHeading(90.0, andVelocity: VELOCITY);
+        self.robot.sendCommand(RKRollCommand(heading: 90.0, andVelocity: VELOCITY));
         lblOutput.text = "Moving right";
     }
     
     @IBAction func didTouch180(sender: AnyObject) {
-        self.robot.driveWithHeading(180.0, andVelocity: VELOCITY);
+        self.robot.sendCommand(RKRollCommand(heading: 180.0, andVelocity: VELOCITY));
         lblOutput.text = "Moving backward";
     }
     
     @IBAction func didTouch270(sender: AnyObject) {
-        self.robot.driveWithHeading(270.0, andVelocity: VELOCITY);
+        self.robot.sendCommand(RKRollCommand(heading: 270.0, andVelocity: VELOCITY));
         lblOutput.text = "Moving left";
     }
     
